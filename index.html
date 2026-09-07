@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ff8a1c" />
+  <title>FCPyS · IR</title>
+  <meta name="description" content="Feed clickeable de actividades de la FCPyS · UNCUYO" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">F</span>
+      <div>
+        <strong>FCPyS · IR</strong>
+        <small>Universidad Nacional de Cuyo</small>
+      </div>
+    </div>
+    <a class="map-link" href="#" aria-label="Abrir FCPyS Maps">MAPS</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">ACTIVIDADES</p>
+      <h1>¿A dónde vas?</h1>
+      <p class="lead">Los flyers publicados por la Facultad aparecen acá automáticamente y se vuelven clickeables.</p>
+    </section>
+
+    <section class="feed-wrap" aria-labelledby="feed-title">
+      <div class="feed-head">
+        <h2 id="feed-title">Últimas publicaciones</h2>
+        <span id="counter" class="counter"></span>
+      </div>
+      <div id="feed" class="feed" aria-live="polite"></div>
+      <div id="empty" class="empty" hidden>
+        <strong>No hay flyers recientes.</strong>
+        <span>Las publicaciones fotográficas se omiten automáticamente.</span>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="post-dialog" class="post-dialog">
+    <button class="dialog-close" aria-label="Cerrar" data-close>×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <template id="card-template">
+    <article class="post-card" tabindex="0" role="button">
+      <div class="thumb">
+        <img alt="" loading="lazy" />
+        <div class="fallback-poster" hidden>
+          <span class="fallback-date"></span>
+          <strong class="fallback-title"></strong>
+          <span class="fallback-place"></span>
+        </div>
+        <div class="card-overlay">
+          <span class="pin">⌖</span>
+          <span class="overlay-label">Ver actividad</span>
+        </div>
+      </div>
+      <div class="card-data">
+        <h3></h3>
+        <p class="meta"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
