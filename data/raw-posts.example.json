@@ -1,0 +1,14 @@
+[
+  {
+    "instagram_id": "17890000000000001",
+    "media_type": "CAROUSEL_ALBUM",
+    "caption": "Texto completo del post de Instagram",
+    "permalink": "https://www.instagram.com/p/XXXXXXXXXXX/",
+    "timestamp": "2026-09-07T20:00:00-03:00",
+    "thumbnail": "https://.../primera-placa.jpg",
+    "media": [
+      "https://.../primera-placa.jpg",
+      "https://.../segunda-placa.jpg"
+    ]
+  }
+]
